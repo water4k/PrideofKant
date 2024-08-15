@@ -5,8 +5,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nikhil Kant - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .section {
+            padding: 2rem 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .profile-photo {
+            width: 150px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        input, textarea {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: #333;
+            color: #fff;
+        }
+
+        blockquote {
+            font-style: italic;
+            background: #e2e2e2;
+            padding: 1rem;
+            border-left: 5px solid #333;
+            margin: 1rem auto;
+            width: 80%;
+        }
+
+        .highlight {
+            background: #e1f5fe;
+            border-left: 5px solid #1e88e5;
+            padding: 1rem;
+        }
+
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: none;
+            cursor: pointer;
+            z-index: 1000;
+        }
+    </style>
 </head>
 
 <body>
@@ -120,35 +246,4 @@
             <ul>
                 <li><a href="https://linkedin.com/in/nikhilkant" target="_blank">LinkedIn</a></li>
                 <li><a href="https://github.com/nikhilkant" target="_blank">GitHub</a></li>
-                <!-- Add other social profiles if needed -->
-            </ul>
-        </div>
-    </section>
-
-    <section id="resume" class="section">
-        <div class="container">
-            <h2>Resume</h2>
-            <a href="resume.pdf" class="btn">Download Resume</a>
-            <iframe src="resume.pdf" width="100%" height="600px"></iframe>
-        </div>
-    </section>
-
-    <section id="testimonials" class="section">
-        <div class="container">
-            <h2>Testimonials</h2>
-            <blockquote>
-                <p>"Nikhil is a highly skilled engineer with a deep understanding of machine learning and automation. His work ethic and dedication are truly impressive."</p>
-                <cite>- Professor/Colleague/Supervisor Name</cite>
-            </blockquote>
-            <!-- Repeat for more testimonials -->
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Nikhil Kant. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-
-</html>
+                <!-- Add
