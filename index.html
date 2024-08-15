@@ -5,27 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nikhil Kant - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
             color: #333;
         }
 
         header {
-            background: #333;
-            color: #fff;
-            padding: 1rem 0;
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
         }
 
         nav ul {
             list-style: none;
+            padding: 0;
+            margin: 0;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
         }
 
         nav ul li {
@@ -33,48 +40,72 @@
         }
 
         nav ul li a {
-            color: #fff;
+            color: #ecf0f1;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #3498db;
         }
 
         .section {
-            padding: 2rem 0;
+            padding: 4rem 2rem;
+            margin-top: 60px;
         }
 
         .container {
             width: 80%;
-            margin: 0 auto;
+            margin: 0;
+            padding: 0;
+            max-width: 1200px;
         }
 
         .profile-photo {
-            width: 150px;
+            width: 200px;
             border-radius: 50%;
             margin-bottom: 1rem;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         h1, h2, h3 {
-            text-align: center;
+            color: #2c3e50;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
             margin-bottom: 1rem;
         }
 
+        h3 {
+            font-size: 1.5rem;
+            color: #3498db;
+        }
+
         p {
-            text-align: center;
             margin-bottom: 1rem;
+            line-height: 1.6;
         }
 
         .btn {
             display: inline-block;
-            padding: 0.5rem 1rem;
-            background: #333;
+            padding: 0.75rem 1.5rem;
+            background: #3498db;
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
             text-align: center;
-            margin: 0 auto;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #2980b9;
         }
 
         form {
@@ -84,47 +115,55 @@
         }
 
         input, textarea {
-            padding: 0.5rem;
+            padding: 0.75rem;
             border: 1px solid #ccc;
             border-radius: 5px;
+            width: 100%;
         }
 
         button {
-            padding: 0.5rem 1rem;
-            background: #333;
+            padding: 0.75rem 1.5rem;
+            background: #3498db;
             color: #fff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #2980b9;
         }
 
         footer {
             text-align: center;
-            padding: 1rem 0;
-            background: #333;
-            color: #fff;
+            padding: 1rem;
+            background: #2c3e50;
+            color: #ecf0f1;
         }
 
         blockquote {
             font-style: italic;
-            background: #e2e2e2;
+            background: #ecf0f1;
             padding: 1rem;
-            border-left: 5px solid #333;
-            margin: 1rem auto;
-            width: 80%;
+            border-left: 5px solid #3498db;
+            margin: 1rem 0;
+            border-radius: 5px;
         }
 
         .highlight {
             background: #e1f5fe;
             border-left: 5px solid #1e88e5;
             padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
         }
 
         #back-to-top {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background: #333;
+            background: #3498db;
             color: #fff;
             padding: 10px 20px;
             border-radius: 5px;
@@ -155,7 +194,7 @@
 
     <section id="home" class="section">
         <div class="container">
-            <img src="nikhil-photo.jpg" alt="Nikhil Kant" class="profile-photo">
+            <img src="https://via.placeholder.com/200" alt="Nikhil Kant" class="profile-photo">
             <h1>Nikhil Kant</h1>
             <p>Bachelor's in Electrical Engineering | ML/Automation Specialist at Vertiv | Master's in Information Systems at UMD College Park</p>
             <a href="resume.pdf" class="btn">Download Resume</a>
@@ -195,12 +234,12 @@
     <section id="projects" class="section">
         <div class="container">
             <h2>Projects</h2>
-            <div class="project">
+            <div class="project highlight">
                 <h3>Project Title</h3>
                 <p>Description: Brief description of the project.</p>
                 <p>Technologies Used: List of technologies used.</p>
                 <p>Outcome: Results or outcomes of the project.</p>
-                <a href="https://github.com/nikhilkant/project" target="_blank">View on GitHub</a>
+                <a href="https://github.com/nikhilkant/project" target="_blank" class="btn">View on GitHub</a>
             </div>
             <!-- Repeat for more projects -->
         </div>
@@ -221,29 +260,14 @@
     <section id="blog" class="section">
         <div class="container">
             <h2>Blog</h2>
-            <div class="blog-post">
+            <div class="blog-post highlight">
                 <h3>Post Title</h3>
                 <p>Summary of the blog post.</p>
-                <a href="blog-post.html">Read more</a>
+                <a href="blog-post.html" class="btn">Read more</a>
             </div>
             <!-- Repeat for more blog posts -->
         </div>
     </section>
 
     <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact</h2>
-            <form id="contact-form" action="send-email.php" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-            <p>Connect with me:</p>
-            <ul>
-                <li><a href="https://linkedin.com/in/nikhilkant" target="_blank">LinkedIn</a></li>
-                <li><a href="https://github.com/nikhilkant" target="_blank">GitHub</a></li>
-                <!-- Add
+       
